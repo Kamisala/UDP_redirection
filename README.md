@@ -1,7 +1,7 @@
 # UDP_Redirction
 This project describes a UDP redirection technique via NetfilterQueue.
 ## Design Topology
-![image](https://user-images.githubusercontent.com/105418310/234157480-e1be95b8-06ed-4161-a781-e8ff5cf890ef.png)
+![image](https://user-images.githubusercontent.com/105418310/234157588-c102294d-87b1-4814-aa9b-db1df02ab577.png)
 
 In a normal case, the Client sends a request_message_1 (for example, "I am client") to Server 1, and Server1 will respond to a response_message_1 (for example, "I am server 1"). Specifically, when the Client connects to Server 1, the Server will print n "I am clients" in the terminal, while the Client will print n "I am server 1". However, when we use UDP redirection technology in Gateway to redirect network traffic, Gateway will redirect network traffic to Server 2 at some point, which will result in subsequent request information from the Client being printed on server 2. At the same time, the subsequent response message received by the Client will be the response_message_2 (for example, "I am server 2") from Server 2. For example, the terminal of Server 1 prints m "I am client" information, the terminal of Server 2 prints n "I am client" information, and the Client terminal prints m "I am server 1" and n "I am server 2" information.
 ## Setup
